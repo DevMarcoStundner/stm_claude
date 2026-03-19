@@ -1,0 +1,26 @@
+{
+    "project": "CAPCOM",
+    "baud": 115200,
+    "timeout_boot": 10,
+    "timeout_line": 3,
+    "total_lines": 22,
+
+    "build_dir": "C:/Users/StundnerMarco/Documents/Voxtronic/Workspaces/Master/General-Purpose-Power-Supply/Software/CAPCOM/build",
+    "elf_path":  "C:/Users/StundnerMarco/Documents/Voxtronic/Workspaces/Master/General-Purpose-Power-Supply/Software/CAPCOM/build/CAPCOM.elf",
+    "target_cfg": "rp2350.cfg",
+
+    "checks": [
+        {
+            "type": "header",
+            "pattern": "PIO Pulse Capture Demo",
+            "search_lines": 3
+        },
+        {
+            "type": "float_range",
+            "skip_lines": 1,
+            "samples": 20,
+            "min": 490.0,
+            "max": 510.0
+        }
+    ]
+}
